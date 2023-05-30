@@ -1,0 +1,129 @@
+.devices-list {
+  @include clear-list();
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.devices-list__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 270px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+  background-color: #ffffff;
+
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    flex: 1 1 auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+
+    background-color: $background-blue;
+
+    cursor: pointer;
+
+    & .devices-list__icon-path {
+      fill: #ffffff;
+    }
+  }
+}
+
+.devices-list__status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.devices-list__icon {
+  margin-bottom: 10px;
+
+  fill: #000000;
+}
+
+.devices-list__icon-path {
+  fill: #000000;
+}
+
+.devices-list__status-text {
+  position: relative;
+
+  &--online {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%; right: 0;
+
+      width: 8px;
+      height: 8px;
+
+      background-color: $background-color-online-status;
+
+      border-radius: 50%;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &--offline {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%; right: 0;
+
+      width: 8px;
+      height: 8px;
+
+      background-color: $background-color-offline-status;
+
+      border-radius: 50%;
+
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.devices-list__name {
+  font-size: 16px;
+}
+
+/* Active state item of devices-list */
+
+.devices-list__item--active {
+  background-color: $background-blue;
+}
+
+.devices-list__item--active .devices-list__icon-path {
+  fill: #ffffff;
+}
+
+.devices-list__item--active .devices-list__status-text {
+  color: #ffffff;
+}
+
+.devices-list__item--active .devices-list__name {
+  color: #ffffff;
+}

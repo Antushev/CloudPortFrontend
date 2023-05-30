@@ -1,0 +1,12 @@
+.contacts-list {
+  @include clear-list();
+
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

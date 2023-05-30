@@ -1,0 +1,15 @@
+.header-section {
+  padding-top: 20px;
+}
+
+.header-section__header {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,12 @@
+.page-header {
+  background-color: $background-orange;
+}
+
+.page-header__menu {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

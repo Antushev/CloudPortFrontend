@@ -1,0 +1,29 @@
+.container {
+  margin: 0 auto;
+  width: 270px;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1196px;
+  }
+
+  &--menu {
+    width: 270px;
+
+    @media (min-width: $tablet-width) {
+      width: 708px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1400px;
+    }
+  }
+}
+
+
+
+
